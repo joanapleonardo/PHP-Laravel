@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,13 +34,24 @@ Route::get('/laravel-blade', function () {
     return view('my_laravel');
 });
 
-Route::get('/home', function () {
-    return view('users.home');
-})->name('home');
 
-Route::get('/home_all_users', function () {
-    return view('users.all_users');
-})->name('show_all_users');
+
+
+
+
+Route::get('/home', [UserController::class, 'index']
+)->name('home');
+
+
+
+
+
+Route::get('/home_all_users', [UserController::class, 'users.all_users']
+)->name('show_all_users');
+
+Route::get('/home_add_users', function () {
+    return view('users.add_users');
+})->name('show_add_users');
 
 Route::get('/home_add_users', function () {
     return view('users.add_users');
