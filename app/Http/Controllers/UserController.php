@@ -21,8 +21,26 @@ public function all_users()
     'nome2' => 'José', 
     'nome3' => 'Rúben'];
 
-    return view('users.all_users');
+    
+    $cesaeInfo = $this->getCesaeInfo();
+
+    return view('users.all_users', compact('cesaeInfo'));
+
 }
+
+
+
+protected function getCesaeInfo()
+{
+    $cesaeInfo = [
+        'name' => 'cesae',
+        'address' => 'rua ciriaco cardoso',
+        'email' => 'cesae@cesae.pt',
+    ];
+
+    return $cesaeInfo;
+}
+
 
 
 public function add_users()

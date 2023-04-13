@@ -36,7 +36,6 @@ Route::get('/laravel-blade', function () {
 });
 
 
-
 Route::get('/home', [UserController::class, 'home']
 )->name('home');
 
@@ -45,6 +44,9 @@ Route::get('/home_all_users', [UserController::class, 'all_users']
 
 Route::get('/home_add_users', [UserController::class, 'add_users']
 )->name('show_add_users');
+
+
+
 
 /*Route::fallback('/fallback', function (){
     return view('users.fallback');
