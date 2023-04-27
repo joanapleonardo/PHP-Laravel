@@ -2,11 +2,17 @@
 
 
 @section('title')
-<title>Adicionar Users</title>
+<title>User</title>
 @endsection
 
 
 @section('content')
+
+<div class="container">
+        <h1>User</h1>
+        <h3>{{ $ourUser['name'] }}</h3>
+</div>
+
 
     {{-- <h1>Aqui podes adicionar users</h1> --}}
     <a href="{{route('home')}}"><li>Voltar</li></a>

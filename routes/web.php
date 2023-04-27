@@ -36,14 +36,29 @@ Route::get('/laravel-blade', function () {
 });
 
 
-Route::get('/home', [UserController::class, 'home']
+Route::get('/home',
+[UserController::class, 'home']
 )->name('home');
 
-Route::get('/home_all_users', [UserController::class, 'all_users']
+Route::get('/home_all_users',
+[UserController::class, 'all_users']
 )->name('show_all_users');
 
-Route::get('/home_add_users', [UserController::class, 'add_users']
+Route::get('/home_add_users',
+[UserController::class, 'add_users']
 )->name('show_add_users');
+
+Route::get('/home_all_tasks',
+[UserController::class, 'all_tasks']
+)->name('show_all_tasks');
+
+Route::get('/view_user{id}',
+[UserController::class, 'viewUser']
+)->name('show_user');
+
+Route::get('/delete_user{id}',
+[UserController::class, 'deleteUser']
+)->name('delete_user');
 
 
 

@@ -1,0 +1,44 @@
+Illuminate\Support\Collection Object
+(
+    [items:protected] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [id] => 1
+                    [name] => Joana
+                    [email] => joana@sapo.pt
+                    [email_verified_at] => 
+                    [password] => 1234
+                    [remember_token] => 
+                    [created_at] => 
+                    [updated_at] => 
+                )
+
+            [1] => stdClass Object
+                (
+                    [id] => 2
+                    [name] => Joao
+                    [email] => joao@sapo.pt
+                    [email_verified_at] => 
+                    [password] => abcd
+                    [remember_token] => 
+                    [created_at] => 
+                    [updated_at] => 
+                )
+
+            [2] => stdClass Object
+                (
+                    [id] => 3
+                    [name] => Maria
+                    [email] => maria@sapo.pt
+                    [email_verified_at] => 
+                    [password] => abcd1234
+                    [remember_token] => 
+                    [created_at] => 
+                    [updated_at] => 
+                )
+
+        )
+
+    [escapeWhenCastingToString:protected] => 
+)
