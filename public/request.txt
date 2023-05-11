@@ -1,0 +1,7 @@
+Array
+(
+    [_token] => F7g2q1Ex84fmhIXtr7Gc86MM9mfOVV0VxhwwFxEE
+    [email] => julieta@sapo.pt
+    [name] => Julieta
+    [password] => qwert
+)

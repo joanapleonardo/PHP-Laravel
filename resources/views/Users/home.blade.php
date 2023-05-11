@@ -24,6 +24,11 @@
             <li>Aqui podes ver todas as tarefas</li>
         </a>
     </ul>
+    <ul>
+        <a href="{{route('new_task')}}">
+            <li>Aqui podes adicionar tarefas</li>
+        </a>
+    </ul>
 </div>
 
 {{-- <h1>Vamos testar as variáveis</h1> --}}

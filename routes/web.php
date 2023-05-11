@@ -48,17 +48,40 @@ Route::get('/home_add_users',
 [UserController::class, 'add_users']
 )->name('show_add_users');
 
-Route::get('/home_all_tasks',
-[UserController::class, 'all_tasks']
-)->name('show_all_tasks');
-
 Route::get('/view_user{id}',
 [UserController::class, 'viewUser']
 )->name('show_user');
 
+Route::get('/view_task{id}',
+[UserController::class, 'viewTask']
+)->name('show_task');
+
 Route::get('/delete_user{id}',
 [UserController::class, 'deleteUser']
 )->name('delete_user');
+
+Route::get('/delete_tasks{id}',
+[UserController::class, 'deleteTask']
+)->name('delete_task');
+
+Route::post('/create_user',
+[UserController::class, 'createUser']
+)->name('create_user');
+
+Route::get('/all_tasks',
+[UserController::class, 'all_tasks']
+)->name('show_all_tasks');
+
+
+Route::get('/add_new_task',
+[UserController::class, 'get_new_task']
+)->name('new_task');
+
+
+Route::post('/create_task',
+[UserController::class, 'createTask']
+)->name('create_task');
+
 
 
 
