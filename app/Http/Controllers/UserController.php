@@ -72,9 +72,9 @@ public function all_tasks()
         return view('users.all_tasks', compact('allTasks'));
     }
 
+
 public function createUser(Request $request)
     {
-
         $myUser = $request->all();
 
         $request -> validate(
@@ -94,40 +94,37 @@ public function createUser(Request $request)
         return redirect('home_all_users')->with('message', 'Utilizador adicionado com sucesso');
     }
 
-    public function get_new_task()
-    {
-        $allUsers = DB::table('users')
-        ->get();
 
-        return view('users.new_task', compact('allUsers'));;
-        }
+public function get_new_task()
+{
+    $allUsers = DB::table('users')
+    ->get();
+
+    return view('users.new_task', compact('allUsers'));;
+    }
 
 
 
+public function createTask(Request $request){
 
-        //criar task
+    $myTask = $request->all();
 
-    public function createTask(Request $request){
-
-        $myTask = $request->all();
-
-        $request->validate(
-        [
+    $request->validate(
+    [
         'name' => 'required|string',
         'description' => 'required|string',
-        ]
-        );
+    ]
+    );
 
-
-        DB::table('tasks')->insert(
-        [
+    DB::table('tasks')->insert(
+    [
         'name' => $request->name,
         'description' => $request->description,
         'user_id' => $request->user_id,
-       ]);
+    ]);
 
-        return redirect('all_tasks')->with('message', 'tarefa criada com sucesso');
-        }
+    return redirect('all_tasks')->with('message', 'tarefa criada com sucesso');
+    }
 
 
 public function viewUser($id)
@@ -137,6 +134,7 @@ public function viewUser($id)
 
         return view('users.view_user', compact('ourUser'));
     }
+
 
 public function deleteUser($id)
     {
@@ -174,6 +172,7 @@ protected function getAllTasks()
         return $allTasks;
     }
 
+
 public function deleteTask($id)
     {
         DB::table('tasks')
@@ -182,6 +181,7 @@ public function deleteTask($id)
 
         return back();
     }
+
 
 public function viewTask($id)
     {
