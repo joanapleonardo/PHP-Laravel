@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +30,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+
+              <li class="nav-item">
+            <a class="nav-link" href="{{route('dashboard')}}">BackOffice</a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
           </li>

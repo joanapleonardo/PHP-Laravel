@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -81,6 +81,10 @@ Route::get('/add_new_task',
 Route::post('/create_task',
 [UserController::class, 'createTask']
 )->name('create_task');
+
+Route::get('/dashboard',
+[DashboardController::class, 'index']
+)->name('dashboard');
 
 
 
