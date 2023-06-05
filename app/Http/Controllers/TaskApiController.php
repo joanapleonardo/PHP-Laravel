@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\TaskCollectionResource;
 use App\Http\Resources\TaskResource;
 use App\Models\Task;
 use Illuminate\Http\Request;
@@ -11,9 +12,9 @@ class TaskApiController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): TaskCollectionResource
     {
-        //
+        return new TaskCollectionResource(resource: Task::paginate(2));
     }
 
     /**

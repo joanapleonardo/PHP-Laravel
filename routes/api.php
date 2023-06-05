@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/task/{task}', [TaskApiController::class, 'show']);
+Route::apiResource('/task', TaskApiController::class);
