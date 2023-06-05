@@ -52,6 +52,10 @@ Route::get('/view_user{id}',
 [UserController::class, 'viewUser']
 )->name('show_user');
 
+Route::post('/update_user',
+[UserController::class, 'editUser']
+)->name('update_user');
+
 Route::get('/view_task{id}',
 [UserController::class, 'viewTask']
 )->name('show_task');
@@ -85,6 +89,10 @@ Route::post('/create_task',
 Route::get('/dashboard',
 [DashboardController::class, 'index']
 )->name('dashboard');
+
+Route::get('/reset-pass',
+[UserController::class, 'resetPass']
+)->name('reset-pass');
 
 
 

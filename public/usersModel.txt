@@ -25,10 +25,11 @@ Illuminate\Database\Eloquent\Collection Object
                     [attributes:protected] => Array
                         (
                             [id] => 8
-                            [name] => Julieta
+                            [name] => Julieta Editado
                             [email] => julieta@sapo.pt
                             [email_verified_at] => 
                             [password] => $2y$10$hGqbeqvNoVo.4RKblz1s.uypTL8gxO2igmlTFBqpUaKdAtqkjE1Ka
+                            [photo] => uploadedFiles/dQTKUvqV5Qm2JVTMjs3OgupOGswfftQYhTtQCiFr.jpg
                             [two_factor_secret] => 
                             [two_factor_recovery_codes] => 
                             [two_factor_confirmed_at] => 
@@ -41,10 +42,11 @@ Illuminate\Database\Eloquent\Collection Object
                     [original:protected] => Array
                         (
                             [id] => 8
-                            [name] => Julieta
+                            [name] => Julieta Editado
                             [email] => julieta@sapo.pt
                             [email_verified_at] => 
                             [password] => $2y$10$hGqbeqvNoVo.4RKblz1s.uypTL8gxO2igmlTFBqpUaKdAtqkjE1Ka
+                            [photo] => uploadedFiles/dQTKUvqV5Qm2JVTMjs3OgupOGswfftQYhTtQCiFr.jpg
                             [two_factor_secret] => 
                             [two_factor_recovery_codes] => 
                             [two_factor_confirmed_at] => 
@@ -147,6 +149,7 @@ Illuminate\Database\Eloquent\Collection Object
                             [email] => sofia@sapo.pt
                             [email_verified_at] => 
                             [password] => $2y$10$AC4oAgPHPs7etkEK.JDbne7TB6..FvOu5Qr92LdV.5zYZUUtWBVtG
+                            [photo] => 
                             [two_factor_secret] => 
                             [two_factor_recovery_codes] => 
                             [two_factor_confirmed_at] => 
@@ -163,6 +166,7 @@ Illuminate\Database\Eloquent\Collection Object
                             [email] => sofia@sapo.pt
                             [email_verified_at] => 
                             [password] => $2y$10$AC4oAgPHPs7etkEK.JDbne7TB6..FvOu5Qr92LdV.5zYZUUtWBVtG
+                            [photo] => 
                             [two_factor_secret] => 
                             [two_factor_recovery_codes] => 
                             [two_factor_confirmed_at] => 
@@ -265,6 +269,7 @@ Illuminate\Database\Eloquent\Collection Object
                             [email] => susana@sapo.pt
                             [email_verified_at] => 
                             [password] => $2y$10$svUK64MGanDVZx0/1QeEV.RpXaJTUY0YKm6xqYXL7bCruL7jjh/gC
+                            [photo] => 
                             [two_factor_secret] => 
                             [two_factor_recovery_codes] => 
                             [two_factor_confirmed_at] => 
@@ -281,6 +286,7 @@ Illuminate\Database\Eloquent\Collection Object
                             [email] => susana@sapo.pt
                             [email_verified_at] => 
                             [password] => $2y$10$svUK64MGanDVZx0/1QeEV.RpXaJTUY0YKm6xqYXL7bCruL7jjh/gC
+                            [photo] => 
                             [two_factor_secret] => 
                             [two_factor_recovery_codes] => 
                             [two_factor_confirmed_at] => 
@@ -383,6 +389,7 @@ Illuminate\Database\Eloquent\Collection Object
                             [email] => marco@sapo.pt
                             [email_verified_at] => 
                             [password] => $2y$10$4eVuriwQYvNYPO7xC0ELDedjfQDrWVukVTtGAbA5qV6qTK4xk0TXi
+                            [photo] => 
                             [two_factor_secret] => 
                             [two_factor_recovery_codes] => 
                             [two_factor_confirmed_at] => 
@@ -399,6 +406,7 @@ Illuminate\Database\Eloquent\Collection Object
                             [email] => marco@sapo.pt
                             [email_verified_at] => 
                             [password] => $2y$10$4eVuriwQYvNYPO7xC0ELDedjfQDrWVukVTtGAbA5qV6qTK4xk0TXi
+                            [photo] => 
                             [two_factor_secret] => 
                             [two_factor_recovery_codes] => 
                             [two_factor_confirmed_at] => 

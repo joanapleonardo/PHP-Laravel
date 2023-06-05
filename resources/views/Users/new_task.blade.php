@@ -3,7 +3,7 @@
 
 
 @section('title')
-    <title>All Users</title>
+    <title>Add Users</title>
 @endsection
 
 
@@ -11,36 +11,43 @@
 @section('content')
 <div class="container">
 
-<form method="POST" action="{{route('create_task')}}">
+    <form method="POST" action="{{ route('create_task') }}">
+        @csrf
+        <div class="mb-3">
+            <label for="exampleInputBame1" class="form-label">Nome da Tarefa</label>
+            <input type="name" class="form-control" name="name" value="" id="exampleInputName1"
+                aria-describedby="emailHelp">
 
-      @csrf
+            @error('name')
+                <div id="nameHelp" class="form-text">Insira um nome com um máximo de 50caracteres.</div>
+            @enderror
 
-      <select class="custom-select" name="user_id">
-        <option value="" selected>Todos os Contactos</option>
-        @foreach ($allUsers as $item)
-            <option value="{{ $item->id }}">
-                {{ $item->name }}</option>
-        @endforeach
-    </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputDescription1" class="form-label">Descrição
+            </label>
+            <input name="description" type="text" value="" class="form-control" id="exampleInputDescription1"
+                aria-describedby="descriptionHelp">
+            @error('description')
+                <div id="nameHelp" class="form-text">Descreva a Tarefa.</div>
+            @enderror
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Utilizador</label>
+            <select class="custom-select" name="user_id">
+                <option value="" selected>Todos os Contactos</option>
+                @foreach ($allUsers as $item)
+                    <option @if ($item->id == request()->query('user_id')) selected @endif value="{{ $item->id }}">
+                        {{ $item->name }}</option>
+                @endforeach
+            </select>
 
-      <div class="mb-3">
-            <label for="exampleInputName1" class="form-label">Nome</label>
-            <input type="text" class="form-control" name="name" value="" id="exampleInputName1" aria-describedby="nameHelp">
+            @error('user_id')
+                <div id="nameHelp" class="form-text">Seleccione um User.</div>
+            @enderror
+        </div>
 
- </div>
-
-      <div class="mb-3">
-        <label for="exampleInputStatus1" class="form-label">Description</label>
-        <input type="text" class="form-control" name="description" value="" id="exampleInputDescription1" aria-describedby="descriptionHelp">
-
-        @error('empty')
-      <div id="emptyHelp" class="form-text">Campo vazio</div>
-      @enderror
-
-      </div>
-
-      <button type="submit" class="btn btn-primary">Submit</button>
-
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 

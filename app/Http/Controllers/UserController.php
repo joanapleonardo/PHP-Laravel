@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Controllers\Task;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
 
 public function home()
     {
+        //dd(Storage::size('imagens/vaca.jpg'));
         $aMinhaVariavel = "Hello turma de Soft Dev";
 
         $userModel = User::all();
@@ -135,6 +138,27 @@ public function viewUser($id)
         return view('users.view_user', compact('ourUser'));
     }
 
+    public function editUser(Request $request)
+    {
+       $request->validate(['nome' => 'required']);
+
+       $photo = null;
+
+       if($request->hasFile('photo')){
+        $photo = Storage::putFile('uploadedFiles', $request->photo);
+       }
+
+       DB::table('users')
+            ->where('id', $request->id)
+            ->update(
+                [
+                    'name' => $request->nome,
+                    'photo' => $photo
+                ]
+            );
+        return redirect('home_all_users')->with('message', 'Utilizador editado com sucesso');
+    }
+
 
 public function deleteUser($id)
     {
@@ -190,6 +214,10 @@ public function viewTask($id)
         ->first();
 
         return view('users.view_task', compact('ourTask'));
+    }
+
+    public function resetPass(){
+        return view('auth.reset_pass');
     }
 
 }

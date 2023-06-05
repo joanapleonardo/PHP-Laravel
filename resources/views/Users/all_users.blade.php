@@ -33,7 +33,7 @@
                     <td>{{$item->password}}</td>
                     <td>{{$item->email}}</td>
                     <td>
-                        <a href="{{ route('show_user', $item->id)}}"> <button class="btn btn-info">Ver</button>
+                        <a href="{{ route('show_user', $item->id)}}"> <button class="btn btn-info">Ver/Editar</button>
                         <a href="{{ route('delete_user', $item->id)}}"><button class="btn btn-danger">Delete</button>
                     </td>
                 </tr>
